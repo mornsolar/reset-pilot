@@ -44,6 +44,11 @@
   .cta-row { margin-top: 28px; }
   .btn { display: inline-block; padding: 13px 24px; border-radius: 999px; font-size: 14.5px; font-weight: 600; text-decoration: none; }
   .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+
+  .alt-path { background: var(--card-deep); border-radius: 12px; padding: 18px 22px; margin: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .alt-path p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+  .divider { text-align: center; font-size: 12.5px; color: var(--ink-faint); letter-spacing: 0.08em; text-transform: uppercase; margin: 20px 0; }
 
   h2.section-title { font-size: 22px; font-weight: 600; margin: 0 0 16px; }
   p { font-size: 15.5px; }
@@ -136,6 +141,13 @@
 <section class="wrap" id="join">
   <h2 class="section-title">Register your interest</h2>
   <p>Takes a minute. No payment, no app download — just tell me you're in.</p>
+
+  <div class="alt-path">
+    <p>Prefer to just talk it through first?</p>
+    <a class="btn btn-secondary" href="https://calendar.app.google/ywqoE3kGQTUejjuSA" target="_blank" rel="noopener">Book a 15-minute chat &rarr;</a>
+  </div>
+  <div class="divider">or fill in the form below</div>
+
   <form action="https://formspree.io/f/moejovzy" method="POST">
     <input type="hidden" name="_subject" value="One-Week Reset — new interest registration">
     <div>
