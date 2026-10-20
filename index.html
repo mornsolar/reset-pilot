@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The One-Week Reset — join a small pilot</title>
+<meta name="description" content="A structured one-week phone-habit reset. I'm running it myself, and inviting a small group to run it alongside me.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #23241F;
+    --ink-soft: #5B5A52;
+    --ink-faint: #6B6A63;
+    --ground: #FBF8F2;
+    --card: #F3EFE4;
+    --card-deep: #EFEAE0;
+    --line: #D8D3C4;
+    --accent: #3B4A6B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.55;
+  }
+  h1, h2, h3, .serif { font-family: 'Fraunces', serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 48px 0; }
+  section + section, footer { border-top: 1px solid var(--line); }
+
+  .hero { padding-top: 72px; padding-bottom: 56px; }
+  .hero-top { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; }
+  .headshot { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .byline { font-size: 14px; color: var(--ink-soft); }
+  .byline strong { color: var(--ink); }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .hero h1 { font-size: clamp(30px, 4.8vw, 44px); line-height: 1.12; margin: 0 0 16px; font-weight: 600; }
+  .hero .lede { font-size: 18px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  .cta-row { margin-top: 28px; }
+  .btn { display: inline-block; padding: 13px 24px; border-radius: 999px; font-size: 14.5px; font-weight: 600; text-decoration: none; }
+  .btn-primary { background: var(--accent); color: #fff; }
+
+  h2.section-title { font-size: 22px; font-weight: 600; margin: 0 0 16px; }
+  p { font-size: 15.5px; }
+
+  .quote-box { background: var(--card); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 20px 0; }
+  .quote-box p { font-family: 'Fraunces', serif; font-style: italic; font-size: 16.5px; line-height: 1.5; margin: 0; color: var(--ink); }
+
+  .steps { margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .steps li { display: flex; gap: 14px; align-items: flex-start; }
+  .step-num { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--card-deep); color: var(--accent); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .steps p { margin: 0; font-size: 15px; }
+
+  .story-box { background: var(--card); border-radius: 14px; padding: 24px 26px; margin-top: 16px; }
+  .story-box p { font-size: 15px; }
+  .story-box a { font-weight: 600; }
+
+  .ask-list { margin: 20px 0 0; padding-left: 20px; }
+  .ask-list li { margin-bottom: 10px; font-size: 15px; }
+
+  form { margin-top: 24px; background: var(--card); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+  label { font-size: 13.5px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 6px; }
+  .hint { font-size: 12.5px; color: var(--ink-faint); font-weight: 400; display: block; margin-top: 2px; }
+  input[type="text"], input[type="email"], textarea {
+    width: 100%; padding: 11px 13px; border-radius: 8px; border: 1px solid var(--line);
+    background: #fff; font-family: 'Work Sans', sans-serif; font-size: 15px; color: var(--ink);
+  }
+  textarea { resize: vertical; min-height: 64px; }
+  .radio-group { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14.5px; font-weight: 400; }
+  .radio-group label { display: flex; align-items: center; gap: 6px; font-weight: 400; font-size: 14.5px; margin-bottom: 0; }
+  fieldset { border: none; padding: 0; margin: 0; }
+  .submit-row { margin-top: 4px; }
+  button[type="submit"] {
+    background: var(--accent); color: #fff; border: none; padding: 13px 26px;
+    border-radius: 999px; font-size: 14.5px; font-weight: 600; cursor: pointer; font-family: 'Work Sans', sans-serif;
+  }
+  .form-note { font-size: 12.5px; color: var(--ink-faint); margin-top: 4px; }
+
+  .honest-note { background: var(--card-deep); border-radius: 10px; padding: 16px 20px; font-size: 13.5px; color: var(--ink-soft); margin-top: 16px; }
+
+  footer { padding: 48px 0 64px; text-align: center; }
+  footer .contact { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 14px; font-size: 14px; font-weight: 500; }
+
+  @media (max-width: 560px) {
+    .hero-top { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap hero">
+  <div class="hero-top">
+    <img class="headshot" src="headshot.webp" alt="Chernyang Lee">
+    <div class="byline"><strong>Chernyang Lee</strong><br>Mathematician &middot; Technology Innovator</div>
+  </div>
+  <p class="eyebrow">An honest experiment, not a product</p>
+  <h1>A one-week phone reset. I'm running it myself — and I'd like a few more people to run it with me.</h1>
+  <p class="lede">Not an app. Not a subscription. A structured week of declaring your phone use before you pick it up, then locking it away for an equal stretch after — to see whether the change actually sticks once the structure is gone.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#join">Register your interest</a>
+  </div>
+</div>
+
+<section class="wrap">
+  <h2 class="section-title">What this actually is</h2>
+  <p>Before each time you pick up your phone, you declare three things — out loud or written down: why you need it right now, which app(s) you'll use, and how long you need. You use it freely for that window. When the window closes, the phone gets locked away for an equal length of time before you can pick it up again — no renegotiating, no "just five more minutes."</p>
+  <p>You choose the lock mechanism yourself — a timer, a screen-time limit, a lockbox, handing it to someone else for a stretch. The method doesn't matter. The ritual does: declare before, lock after, no exceptions.</p>
+  <div class="quote-box">
+    <p>"More like training one's muscle, not an app that should be on forever — it will cause plenty of inconvenience for the locked-up period, and that's only acceptable because it's bounded and you chose it."</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="section-title">Why I'm asking you to join, not buy</h2>
+  <p>I tested an early, informal version of this on myself first — my daughter was the one who, mid-experiment, taught me something I hadn't planned for. <a href="https://claude.ai/artifact/PgD83dJXiGFQux1zDJaepP" target="_blank" rel="noopener">You can read that story here &rarr;</a>.</p>
+  <div class="story-box">
+    <p>What I haven't done yet is run the full, structured one-week version properly — and I don't know if what changed for me in that small moment holds up over a real week, for people who aren't me. That's genuinely the open question. This page exists to find a few people willing to find out with me, not to sell something I've already proven works.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="section-title">What I'm asking of you</h2>
+  <ol class="steps">
+    <li><span class="step-num">1</span><p>Commit to one week of the declare-then-lock ritual, plus a short baseline day before it starts.</p></li>
+    <li><span class="step-num">2</span><p>Notice and jot down what happens — a few lines a day is enough.</p></li>
+    <li><span class="step-num">3</span><p>Talk to me honestly afterward about what changed, what didn't, and whether it stuck once the week ended.</p></li>
+  </ol>
+  <div class="honest-note">This is free, and it's genuinely small — a handful of people, because I want to pay attention to each person's week, not because of manufactured scarcity. I'll reach out directly to coordinate timing once a small group is together.</div>
+</section>
+
+<section class="wrap" id="join">
+  <h2 class="section-title">Register your interest</h2>
+  <p>Takes a minute. No payment, no app download — just tell me you're in.</p>
+  <form action="https://formspree.io/f/moejovzy" method="POST">
+    <input type="hidden" name="_subject" value="One-Week Reset — new interest registration">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <fieldset>
+      <label>This would be for</label>
+      <div class="radio-group">
+        <label><input type="radio" name="who_for" value="myself" required> my own phone habits</label>
+        <label><input type="radio" name="who_for" value="a teen I look after"> a teen I look after</label>
+      </div>
+    </fieldset>
+    <div>
+      <label for="habit">What's the one phone habit you'd most like to change? <span class="hint">Optional</span></label>
+      <textarea id="habit" name="habit_to_change"></textarea>
+    </div>
+    <fieldset>
+      <label>If this became an ongoing paid offering later, would you expect to pay for it? <span class="hint">Optional — just curious, no commitment either way</span></label>
+      <div class="radio-group">
+        <label><input type="radio" name="willing_to_pay" value="yes"> Yes</label>
+        <label><input type="radio" name="willing_to_pay" value="maybe"> Maybe</label>
+        <label><input type="radio" name="willing_to_pay" value="no"> No</label>
+      </div>
+    </fieldset>
+    <div class="submit-row">
+      <button type="submit">Count me in</button>
+      <div class="form-note">I'll email you directly to coordinate — no spam, no list beyond this.</div>
+    </div>
+  </form>
+</section>
+
+<footer class="wrap">
+  <p class="eyebrow">Questions first?</p>
+  <p>Happy to talk it through before you commit to anything.</p>
+  <div class="contact">
+    <a href="mailto:chernyang.lee@gmail.com">chernyang.lee@gmail.com</a>
+    <a href="https://www.linkedin.com/in/chernyang-lee-8924a75b/" target="_blank" rel="noopener">linkedin.com/in/chernyang-lee-8924a75b</a>
+  </div>
+</footer>
+
+</body>
+</html>
